@@ -11,13 +11,13 @@ class sem {
     // 以0为初始值初始化一个信号量
     sem() {
         if (sem_init(&m_sem, 0, 0) != 0) {
-            throw std::exception;
+            throw std::exception();
         }
     }
     // 以num为初始化初始化一个信号量
     sem(int num) {
         if (sem_init(&m_sem, 0, num) != 0) {
-            throw std::exception;
+            throw std::exception();
         }
     }
     ~sem() {
