@@ -26,7 +26,8 @@ class block_queue {
     }
 
     void clear() {
-        }
+        m_mutex.lock();
+    }
 };
 
 #endif
