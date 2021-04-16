@@ -61,4 +61,19 @@ class locker {
     pthread_mutex_t m_mutex;
 };
 
+class cond() {
+   public:
+    cond() {
+        if (pthread_cond_init(&m_cond, NULL) = 0) {
+            throw std::exception();
+        }
+    }
+    ~cond() {
+        pthread_cond_destroy(&m_cond);
+    }
+
+   private:
+    pthread_cond_t m_cond;
+};
+
 #endif
